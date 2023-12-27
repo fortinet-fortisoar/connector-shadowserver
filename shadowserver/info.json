@@ -1,274 +1,274 @@
 {
-    "name": "shadowserver",
-    "version": "1.0.0",
-    "label": "Shadow Server",
-    "description": "Shadow server provides you with access to the most timely, critical Internet security like data collection,network reporting,investigation support ,reveal security vulnerabilities, expose malicious activity and help remediate victims.",
-    "publisher": "spryIQ.co",
-    "icon_small_name": "small.png",
-    "icon_large_name": "large.png",
-    "cs_compatible": true,
-    "cs_approved": false,
-    "category": "Vulnerability and Risk Management",
-    "help_online": "https://github.com/jitesh-spryiq/connector-shadowserver/blob/develop/docs/ShadowServerConnectorDoc.md",
-    "configuration": {
-        "fields": [
-            {
-                "title": "Server URL",
-                "type": "text",
-                "name": "server_url",
-                "required": true,
-                "visible": true,
-                "editable": true,
-                "value": "",
-                "placeholder": "e.g: https://api.shadowserver.com or api.shadowserver.com",
-                "tooltip": "Specify the URL of the shadow-server server to connect and perform automated operations."
-            }
-        ]
-    },
-    "operations": [
-        {
-            "title": "Get Origin Query",
-            "operation": "get_origin_query",
-            "description": "Report back the originating ASN and ASN name for the specific CIDR.",
-            "annotation": "get_origin_query",
-            "category": "investigation",
-            "parameters": [
-                {
-                    "title": "IP Address",
-                    "type": "text",
-                    "name": "ip_address",
-                    "required": true,
-                    "visible": true,
-                    "editable": true,
-                    "value": "",
-                    "placeholder": "e.g:1.1.1.1",
-                    "tooltip": "Specify the IP address."
-                }
-            ],
-            "output_schema": [
-                {
-                    "asname_short": "",
-                    "prefix": "",
-                    "asn": "",
-                    "asname_long": "",
-                    "geo": "",
-                    "nic": ""
-                }
-            ],
-            "open": false
-        },
-        {
-            "title": "Get Peer Query",
-            "operation": "get_peer_query",
-            "description": "Report back all the BGP peers for a specific CIDR.",
-            "annotation": "get_peer_query",
-            "category": "investigation",
-            "parameters": [
-                {
-                    "title": "IP Address",
-                    "type": "text",
-                    "name": "ip_address",
-                    "required": true,
-                    "visible": true,
-                    "editable": true,
-                    "value": "",
-                    "placeholder": "e.g:1.1.1.1",
-                    "tooltip": "Specify the IP address"
-                }
-            ],
-            "output_schema": [
-                {
-                    "prefix": "",
-					"peer": "",
-					"asn": "",
-					"asname_short": "",
-					"asname_long": "",
-					"geo": "",
-					"nic": ""
-                }
-            ],
-            "open": false
-        },
-        {
-            "title": "Get Prefix Query",
-            "operation": "get_prefix_query",
-            "description": "Given an ASN report back all the routed CIDR's.",
-            "annotation": "get_prefix_query",
-            "category": "investigation",
-            "parameters": [
-                {
-                    "title": "Query",
-                    "type": "text",
-                    "name": "query",
-                    "required": true,
-                    "visible": true,
-                    "editable": true,
-                    "value": "",
-                    "placeholder": "e.g:22414",
-                    "tooltip": "Specify the Query."
-                }
-            ],
-            "output_schema": [ ],
-            "open": false
-        },
-        {
-            "title": "Get ASN Query",
-            "operation": "get_asn_query",
-            "description": "Report back any information about the ASN.",
-            "annotation": "get_asn_query",
-            "category": "investigation",
-            "parameters": [
-                {
-                    "title": "Query",
-                    "type": "text",
-                    "name": "query",
-                    "required": true,
-                    "visible": true,
-                    "editable": true,
-                    "value": "",
-                    "placeholder": "e.g:109",
-                    "tooltip": "Specify the query."
-                }
-            ],
-            "output_schema": [
-                {
-                    "asname_short": "",
-                    "date": "",
-                    "asn": "",
-                    "asname_long": "",
-                    "geo": "",
-                    "nic": ""
-                }
-            ],
-            "open": false
-        },
-        {
-            "title": "Get Malware Query",
-            "operation": "get_malware_query",
-            "description": "Returns a JSON response containing static details about the requested sample as well as antivirus vendor and signature details.",
-            "annotation": "get_malware_query",
-            "category": "investigation",
-            "parameters": [
-                {
-                    "title": "MD5",
-                    "type": "text",
-                    "name": "md5",
-                    "required": true,
-                    "visible": true,
-                    "editable": true,
-                    "value": "",
-                    "placeholder": "e.g:dfe1832e02888422f48d6896dc8e8f73",
-                    "tooltip": "Specify the query"
-                }
-            ],
-            "output_schema": [
-                {
-                    "timestamp": "",
-						"first_seen": "",
-						"sha1": "",
-						"anti_virus": [
-						  {
-							"md5": "",
-							"vendor": "",
-							"signature": "",
-							"timestamp": ""
-						  },
-						  {
-							"signature": "",
-							"timestamp": "",
-							"md5": "",
-							"vendor": ""
-						  },
-						  {
-							"timestamp": "",
-							"signature": "",
-							"vendor": "",
-							"md5": ""
-						  },
-						  {
-							"vendor": "",
-							"md5": "",
-							"timestamp": "",
-							"signature": ""
-						  },
-						  {
-							"md5": "",
-							"vendor": "",
-							"timestamp": "",
-							"signature": ""
-						  },
-						  {
-							"md5": "",
-							"vendor": "",
-							"timestamp": "",
-							"signature": ""
-						  }
-						],
-						"last_seen": "",
-						"type": "",
-						"sha256": "",
-						"md5": "",
-						"tlsh": "",
-						"import_hash": "",
-						"entropic": "",
-						"pehash": "",
-						"filesize": "",
-						"adobe_malware_classifier": "",
-						"sha512": "",
-						"magic": ""
-                }
-            ],
-            "open": false
-        },
+  "name": "shadowserver",
+  "version": "1.0.0",
+  "label": "Shadow Server",
+  "description": "Shadow server provides you with access to the most timely, critical Internet security like data collection,network reporting,investigation support ,reveal security vulnerabilities, expose malicious activity and help remediate victims.",
+  "publisher": "spryIQ.co",
+  "icon_small_name": "small.png",
+  "icon_large_name": "large.png",
+  "cs_compatible": true,
+  "cs_approved": false,
+  "category": "Vulnerability and Risk Management",
+  "help_online": "https://github.com/jitesh-spryiq/connector-shadowserver/blob/develop/docs/ShadowServerConnectorDoc.md",
+  "configuration": {
+    "fields": [
       {
-            "title": "Get Programs Query",
-            "operation": "get_programs_query",
-            "description": "Returns a JSON response containing the details for the requested program. Replaces bin-test.shadowserver.org.",
-            "annotation": "get_programs_query",
-            "category": "investigation",
-            "parameters": [
-                {
-                    "title": "Query",
-                    "type": "text",
-                    "name": "query",
-                    "required": true,
-                    "visible": true,
-                    "editable": true,
-                    "value": "",
-                    "placeholder": "e.g:7fe2248de77813ce850053ed0ce8a474",
-                    "tooltip": "Specify the query"
-                }
-            ],
-            "output_schema": [
-                {
-                    "product_name" : "",
-					  "source" : "",
-					  "sha512" : "",
-					  "os_version" : "",
-					  "fileversion" : "",
-					  "crc32" : "",
-					  "trusted_signature" : "",
-					  "description" : "",
-					  "binary" : "",
-					  "sig_trustfile" : "",
-					  "os_name" : "",
-					  "language" : "",
-					  "filename" : "",
-					  "reference" : "",
-					  "product_version" : "",
-					  "mfg_name" : "",
-					  "dirname" : "",
-					  "os_mfg" : "",
-					  "application_type" : "",
-					  "filesize" : "",
-					  "signer" : "",
-					  "sig_timestamp" : "",
-					  "filetimestamp" : "",
-					  "strongname_signed" : "",
-					  "source_version" : "",
-					  "bit" : ""
-                }
-            ]
-        }
+        "title": "Server URL",
+        "type": "text",
+        "name": "server_url",
+        "required": true,
+        "visible": true,
+        "editable": true,
+        "value": "",
+        "placeholder": "e.g: https://api.shadowserver.com or api.shadowserver.com",
+        "tooltip": "Specify the URL of the shadow-server server to connect and perform automated operations."
+      }
     ]
+  },
+  "operations": [
+    {
+      "title": "Get Origin Query",
+      "operation": "get_origin_query",
+      "description": "Report back the originating ASN and ASN name for the specific CIDR.",
+      "annotation": "get_origin_query",
+      "category": "investigation",
+      "parameters": [
+        {
+          "title": "IP Address",
+          "type": "text",
+          "name": "ip_address",
+          "required": true,
+          "visible": true,
+          "editable": true,
+          "value": "",
+          "placeholder": "e.g:1.1.1.1",
+          "tooltip": "Specify the IP address."
+        }
+      ],
+      "output_schema": [
+        {
+          "asname_short": "",
+          "prefix": "",
+          "asn": "",
+          "asname_long": "",
+          "geo": "",
+          "nic": ""
+        }
+      ],
+      "open": false
+    },
+    {
+      "title": "Get Peer Query",
+      "operation": "get_peer_query",
+      "description": "Report back all the BGP peers for a specific CIDR.",
+      "annotation": "get_peer_query",
+      "category": "investigation",
+      "parameters": [
+        {
+          "title": "IP Address",
+          "type": "text",
+          "name": "ip_address",
+          "required": true,
+          "visible": true,
+          "editable": true,
+          "value": "",
+          "placeholder": "e.g:1.1.1.1",
+          "tooltip": "Specify the IP address"
+        }
+      ],
+      "output_schema": [
+        {
+          "prefix": "",
+          "peer": "",
+          "asn": "",
+          "asname_short": "",
+          "asname_long": "",
+          "geo": "",
+          "nic": ""
+        }
+      ],
+      "open": false
+    },
+    {
+      "title": "Get Prefix Query",
+      "operation": "get_prefix_query",
+      "description": "Given an ASN report back all the routed CIDR's.",
+      "annotation": "get_prefix_query",
+      "category": "investigation",
+      "parameters": [
+        {
+          "title": "Query",
+          "type": "text",
+          "name": "query",
+          "required": true,
+          "visible": true,
+          "editable": true,
+          "value": "",
+          "placeholder": "e.g:22414",
+          "tooltip": "Specify the Query."
+        }
+      ],
+      "output_schema": [],
+      "open": false
+    },
+    {
+      "title": "Get ASN Query",
+      "operation": "get_asn_query",
+      "description": "Report back any information about the ASN.",
+      "annotation": "get_asn_query",
+      "category": "investigation",
+      "parameters": [
+        {
+          "title": "Query",
+          "type": "text",
+          "name": "query",
+          "required": true,
+          "visible": true,
+          "editable": true,
+          "value": "",
+          "placeholder": "e.g:109",
+          "tooltip": "Specify the query."
+        }
+      ],
+      "output_schema": [
+        {
+          "asname_short": "",
+          "date": "",
+          "asn": "",
+          "asname_long": "",
+          "geo": "",
+          "nic": ""
+        }
+      ],
+      "open": false
+    },
+    {
+      "title": "Get Malware Query",
+      "operation": "get_malware_query",
+      "description": "Returns a JSON response containing static details about the requested sample as well as antivirus vendor and signature details.",
+      "annotation": "get_malware_query",
+      "category": "investigation",
+      "parameters": [
+        {
+          "title": "MD5",
+          "type": "text",
+          "name": "md5",
+          "required": true,
+          "visible": true,
+          "editable": true,
+          "value": "",
+          "placeholder": "e.g:dfe1832e02888422f48d6896dc8e8f73",
+          "tooltip": "Specify the query"
+        }
+      ],
+      "output_schema": [
+        {
+          "timestamp": "",
+          "first_seen": "",
+          "sha1": "",
+          "anti_virus": [
+            {
+              "md5": "",
+              "vendor": "",
+              "signature": "",
+              "timestamp": ""
+            },
+            {
+              "signature": "",
+              "timestamp": "",
+              "md5": "",
+              "vendor": ""
+            },
+            {
+              "timestamp": "",
+              "signature": "",
+              "vendor": "",
+              "md5": ""
+            },
+            {
+              "vendor": "",
+              "md5": "",
+              "timestamp": "",
+              "signature": ""
+            },
+            {
+              "md5": "",
+              "vendor": "",
+              "timestamp": "",
+              "signature": ""
+            },
+            {
+              "md5": "",
+              "vendor": "",
+              "timestamp": "",
+              "signature": ""
+            }
+          ],
+          "last_seen": "",
+          "type": "",
+          "sha256": "",
+          "md5": "",
+          "tlsh": "",
+          "import_hash": "",
+          "entropic": "",
+          "pehash": "",
+          "filesize": "",
+          "adobe_malware_classifier": "",
+          "sha512": "",
+          "magic": ""
+        }
+      ],
+      "open": false
+    },
+    {
+      "title": "Get Programs Query",
+      "operation": "get_programs_query",
+      "description": "Returns a JSON response containing the details for the requested program. Replaces bin-test.shadowserver.org.",
+      "annotation": "get_programs_query",
+      "category": "investigation",
+      "parameters": [
+        {
+          "title": "Query",
+          "type": "text",
+          "name": "query",
+          "required": true,
+          "visible": true,
+          "editable": true,
+          "value": "",
+          "placeholder": "e.g:7fe2248de77813ce850053ed0ce8a474",
+          "tooltip": "Specify the query"
+        }
+      ],
+      "output_schema": [
+        {
+          "product_name": "",
+          "source": "",
+          "sha512": "",
+          "os_version": "",
+          "fileversion": "",
+          "crc32": "",
+          "trusted_signature": "",
+          "description": "",
+          "binary": "",
+          "sig_trustfile": "",
+          "os_name": "",
+          "language": "",
+          "filename": "",
+          "reference": "",
+          "product_version": "",
+          "mfg_name": "",
+          "dirname": "",
+          "os_mfg": "",
+          "application_type": "",
+          "filesize": "",
+          "signer": "",
+          "sig_timestamp": "",
+          "filetimestamp": "",
+          "strongname_signed": "",
+          "source_version": "",
+          "bit": ""
+        }
+      ]
+    }
+  ]
 }

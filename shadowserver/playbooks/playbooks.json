@@ -1,0 +1,511 @@
+{
+  "type": "workflow_collections",
+  "data": [
+    {
+      "uuid": "7405c2b4-1d0d-4e56-bda6-7b9371ec9421",
+      "@type": "WorkflowCollection",
+      "name": "Sample - Shadow Server - 1.0.0",
+      "description": "Shadow server provides you with access to the most timely, critical Internet security like data collection,network reporting,investigation support ,reveal security vulnerabilities, expose malicious activity and help remediate victims.",
+      "visible": true,
+      "image": null,
+      "recordTags": [
+        "Shadowserver",
+        "shadowserver"
+      ],
+      "workflows": [
+        {
+          "@type": "Workflow",
+          "uuid": "2438690e-0089-4b53-89c0-50ca2e81e0ba",
+          "collection": "/api/3/workflow_collections/7405c2b4-1d0d-4e56-bda6-7b9371ec9421",
+          "triggerLimit": null,
+          "description": "Report back the originating ASN and ASN name for the specific CIDR.",
+          "name": "Get Origin Query",
+          "tag": "#Shadow Server",
+          "recordTags": [
+            "Shadowserver",
+            "shadowserver"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/21abf2c5-cbd8-40ea-8acb-3946afe3c4b7",
+          "steps": [
+            {
+              "uuid": "21abf2c5-cbd8-40ea-8acb-3946afe3c4b7",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "route": "00944f7e-0e00-4457-8868-0d088ecec5c7",
+                "title": "Shadow Server: Get Origin Query",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
+                "singleRecordExecution": false,
+                "noRecordExecution": true,
+                "executeButtonText": "Execute"
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
+            },
+            {
+              "uuid": "61bb7ba0-4125-4201-9334-48f69c027ef5",
+              "@type": "WorkflowStep",
+              "name": "Get Origin Query",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Shadow Server",
+                "config": "''",
+                "params": {
+                  "ip_address": ""
+                },
+                "version": "1.0.0",
+                "connector": "shadowserver",
+                "operation": "get_origin_query",
+                "operationTitle": "Get Origin Query",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "uuid": "cb41a453-0466-4d2a-9550-ec6c57975388",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Origin Query",
+              "sourceStep": "/api/3/workflow_steps/21abf2c5-cbd8-40ea-8acb-3946afe3c4b7",
+              "targetStep": "/api/3/workflow_steps/61bb7ba0-4125-4201-9334-48f69c027ef5"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "7f764d5d-98b5-41bb-b79f-b40928179295",
+          "collection": "/api/3/workflow_collections/7405c2b4-1d0d-4e56-bda6-7b9371ec9421",
+          "triggerLimit": null,
+          "description": "Report back all the BGP peers for a specific CIDR.",
+          "name": "Get Peer Query",
+          "tag": "#Shadow Server",
+          "recordTags": [
+            "Shadowserver",
+            "shadowserver"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/423cd73f-cea1-4ce0-8594-5021585e78e8",
+          "steps": [
+            {
+              "uuid": "423cd73f-cea1-4ce0-8594-5021585e78e8",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "route": "29a5e91d-4eae-442d-abb9-2b367e617046",
+                "title": "Shadow Server: Get Peer Query",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
+                "singleRecordExecution": false,
+                "noRecordExecution": true,
+                "executeButtonText": "Execute"
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
+            },
+            {
+              "uuid": "665f2966-9397-4d5d-a16a-53067711a526",
+              "@type": "WorkflowStep",
+              "name": "Get Peer Query",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Shadow Server",
+                "config": "''",
+                "params": {
+                  "ip_address": ""
+                },
+                "version": "1.0.0",
+                "connector": "shadowserver",
+                "operation": "get_peer_query",
+                "operationTitle": "Get Peer Query",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "uuid": "25159444-f00a-4149-afad-52387868cb04",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Peer Query",
+              "sourceStep": "/api/3/workflow_steps/423cd73f-cea1-4ce0-8594-5021585e78e8",
+              "targetStep": "/api/3/workflow_steps/665f2966-9397-4d5d-a16a-53067711a526"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "4ec916c9-0cce-4430-9086-74d0d791ec28",
+          "collection": "/api/3/workflow_collections/7405c2b4-1d0d-4e56-bda6-7b9371ec9421",
+          "triggerLimit": null,
+          "description": "Given an ASN report back all the routed CIDR's.",
+          "name": "Get Prefix Query",
+          "tag": "#Shadow Server",
+          "recordTags": [
+            "Shadowserver",
+            "shadowserver"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/8eabae40-5a4f-4154-96a1-6e25fdee7e96",
+          "steps": [
+            {
+              "uuid": "8eabae40-5a4f-4154-96a1-6e25fdee7e96",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "route": "6f5282e0-3674-42d0-b02a-829b7df54df9",
+                "title": "Shadow Server: Get Prefix Query",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
+                "singleRecordExecution": false,
+                "noRecordExecution": true,
+                "executeButtonText": "Execute"
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
+            },
+            {
+              "uuid": "2c794e00-d3ce-448c-9aa4-def09b3bf6fc",
+              "@type": "WorkflowStep",
+              "name": "Get Prefix Query",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Shadow Server",
+                "config": "''",
+                "params": {
+                  "query": ""
+                },
+                "version": "1.0.0",
+                "connector": "shadowserver",
+                "operation": "get_prefix_query",
+                "operationTitle": "Get Prefix Query",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "uuid": "8004bec5-fdc0-444b-a75e-b2c71b7cdd0e",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Prefix Query",
+              "sourceStep": "/api/3/workflow_steps/8eabae40-5a4f-4154-96a1-6e25fdee7e96",
+              "targetStep": "/api/3/workflow_steps/2c794e00-d3ce-448c-9aa4-def09b3bf6fc"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "874fd49b-1adc-4b5a-95fb-34974db718f2",
+          "collection": "/api/3/workflow_collections/7405c2b4-1d0d-4e56-bda6-7b9371ec9421",
+          "triggerLimit": null,
+          "description": "Report back any information about the ASN.",
+          "name": "Get ASN Query",
+          "tag": "#Shadow Server",
+          "recordTags": [
+            "Shadowserver",
+            "shadowserver"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/f59f5a34-59b5-4c6f-8227-52948eeece1e",
+          "steps": [
+            {
+              "uuid": "f59f5a34-59b5-4c6f-8227-52948eeece1e",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "route": "2e817581-f6c9-408f-af01-6d1ce06cdd11",
+                "title": "Shadow Server: Get ASN Query",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
+                "singleRecordExecution": false,
+                "noRecordExecution": true,
+                "executeButtonText": "Execute"
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
+            },
+            {
+              "uuid": "c787bce2-9644-4865-8155-8383d3a949fe",
+              "@type": "WorkflowStep",
+              "name": "Get ASN Query",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Shadow Server",
+                "config": "''",
+                "params": {
+                  "query": ""
+                },
+                "version": "1.0.0",
+                "connector": "shadowserver",
+                "operation": "get_asn_query",
+                "operationTitle": "Get ASN Query",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "uuid": "d33cecd0-5542-40c2-b42a-5bb82d14a378",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get ASN Query",
+              "sourceStep": "/api/3/workflow_steps/f59f5a34-59b5-4c6f-8227-52948eeece1e",
+              "targetStep": "/api/3/workflow_steps/c787bce2-9644-4865-8155-8383d3a949fe"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "7471d8a1-60b3-406d-aa52-5a3f596371a2",
+          "collection": "/api/3/workflow_collections/7405c2b4-1d0d-4e56-bda6-7b9371ec9421",
+          "triggerLimit": null,
+          "description": "Returns a JSON response containing static details about the requested sample as well as antivirus vendor and signature details.",
+          "name": "Get Malware Query",
+          "tag": "#Shadow Server",
+          "recordTags": [
+            "Shadowserver",
+            "shadowserver"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/b920a0bb-7447-4b6a-bd85-21d8df148ae2",
+          "steps": [
+            {
+              "uuid": "b920a0bb-7447-4b6a-bd85-21d8df148ae2",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "route": "ef2c5f71-96a7-4def-b50a-70c871e3f9a6",
+                "title": "Shadow Server: Get Malware Query",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
+                "singleRecordExecution": false,
+                "noRecordExecution": true,
+                "executeButtonText": "Execute"
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
+            },
+            {
+              "uuid": "27af0ba9-7e19-4140-8d31-319181f399f7",
+              "@type": "WorkflowStep",
+              "name": "Get Malware Query",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Shadow Server",
+                "config": "''",
+                "params": {
+                  "md5": ""
+                },
+                "version": "1.0.0",
+                "connector": "shadowserver",
+                "operation": "get_malware_query",
+                "operationTitle": "Get Malware Query",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "uuid": "3772b30a-f4af-4235-8b19-5a55bf7757ca",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Malware Query",
+              "sourceStep": "/api/3/workflow_steps/b920a0bb-7447-4b6a-bd85-21d8df148ae2",
+              "targetStep": "/api/3/workflow_steps/27af0ba9-7e19-4140-8d31-319181f399f7"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "9f8f0ff0-bab0-446a-8e10-80ed0b882bad",
+          "collection": "/api/3/workflow_collections/7405c2b4-1d0d-4e56-bda6-7b9371ec9421",
+          "triggerLimit": null,
+          "description": "Returns a JSON response containing the details for the requested program. Replaces bin-test.shadowserver.org.",
+          "name": "Get Programs Query",
+          "tag": "#Shadow Server",
+          "recordTags": [
+            "Shadowserver",
+            "shadowserver"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/e9176e4c-93ab-4b3d-9f69-dd12166291a4",
+          "steps": [
+            {
+              "uuid": "e9176e4c-93ab-4b3d-9f69-dd12166291a4",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "route": "bdf7700f-aaa1-419f-8eff-639b99f777bc",
+                "title": "Shadow Server: Get Programs Query",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
+                "singleRecordExecution": false,
+                "noRecordExecution": true,
+                "executeButtonText": "Execute"
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
+            },
+            {
+              "uuid": "3bbfe553-9978-423f-a68d-70200a74a553",
+              "@type": "WorkflowStep",
+              "name": "Get Programs Query",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Shadow Server",
+                "config": "''",
+                "params": {
+                  "query": ""
+                },
+                "version": "1.0.0",
+                "connector": "shadowserver",
+                "operation": "get_programs_query",
+                "operationTitle": "Get Programs Query",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "uuid": "b3883088-67b8-48d0-8ddd-a1288c2fa4c1",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Programs Query",
+              "sourceStep": "/api/3/workflow_steps/e9176e4c-93ab-4b3d-9f69-dd12166291a4",
+              "targetStep": "/api/3/workflow_steps/3bbfe553-9978-423f-a68d-70200a74a553"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

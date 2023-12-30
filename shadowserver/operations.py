@@ -1,8 +1,9 @@
-""" Copyright start
-  Copyright (C) 2008 - 2023 Fortinet Inc.
-  All rights reserved.
-  FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
-  Copyright end """
+"""
+Copyright start
+MIT License
+Copyright (c) 2023 Fortinet Inc
+Copyright end
+"""
 import requests
 from connectors.core.connector import get_logger, ConnectorError
 logger = get_logger('shadowserver')
@@ -13,12 +14,12 @@ class ShadowServer(object):
     def __init__(self, config):
         self.server_url = config.get('server_url').strip()
         self.headers = {'accept': 'application/json'}
-        if not self.server_url.startswith('https://'):
-            self.server_url = 'https://{0}/'.format(self.server_url)
+        if not self.server_url.startswith('https://') and not self.server_url.startswith('http://'):
+            self.server_url = 'https://' + self.server_url
 
     def make_api_call(self, endpoint=None, method='GET', headers=None, health_check=False):
         url = self.server_url + endpoint
-        logger.debug('Final url to make rest call is: {0}'.format(url))
+        logger.debug('API Service Endpoint: {0}'.format(url))
         if headers:
             self.headers.update(headers)
         try:

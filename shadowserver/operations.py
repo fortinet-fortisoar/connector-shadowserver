@@ -12,7 +12,7 @@ logger = get_logger('shadowserver')
 class ShadowServer(object):
 
     def __init__(self, config):
-        self.server_url = config.get('server_url').strip()
+        self.server_url = config.get('server_url','').strip()
         self.headers = {'accept': 'application/json'}
         if not self.server_url.startswith('https://') and not self.server_url.startswith('http://'):
             self.server_url = 'https://' + self.server_url

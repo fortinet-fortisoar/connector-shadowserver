@@ -19,9 +19,9 @@
         "required": true,
         "visible": true,
         "editable": true,
-        "value": "",
-        "placeholder": "e.g: https://api.shadowserver.com or api.shadowserver.com",
-        "tooltip": "Specify the URL of the shadow-server server to connect and perform automated operations."
+        "placeholder": "e.g: https://api.shadowserver.org or api.shadowserver.org",
+        "tooltip": "Specify the URL of the shadow-server server to connect and perform automated operations.",
+        "value": "api.shadowserver.org"
       }
     ]
   },

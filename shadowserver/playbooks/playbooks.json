@@ -4,8 +4,8 @@
     {
       "uuid": "7405c2b4-1d0d-4e56-bda6-7b9371ec9421",
       "@type": "WorkflowCollection",
-      "name": "Sample - Shadow Server - 1.0.0",
-      "description": "Shadow server provides you with access to the most timely, critical Internet security like data collection,network reporting,investigation support ,reveal security vulnerabilities, expose malicious activity and help remediate victims.",
+      "name": "Sample - Shadowserver - 1.0.0",
+      "description": "Shadowserver provides you with access to the most timely, critical Internet security like data collection,network reporting,investigation support ,reveal security vulnerabilities, expose malicious activity and help remediate victims.",
       "visible": true,
       "image": null,
       "recordTags": [
@@ -20,7 +20,7 @@
           "triggerLimit": null,
           "description": "Report back the originating ASN and ASN name for the specific CIDR.",
           "name": "Get Origin Query",
-          "tag": "#Shadow Server",
+          "tag": "#Shadowserver",
           "recordTags": [
             "Shadowserver",
             "shadowserver"
@@ -40,7 +40,7 @@
               "status": null,
               "arguments": {
                 "route": "00944f7e-0e00-4457-8868-0d088ecec5c7",
-                "title": "Shadow Server: Get Origin Query",
+                "title": "Shadowserver: Get Origin Query",
                 "resources": [
                   "alerts"
                 ],
@@ -65,7 +65,7 @@
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Shadow Server",
+                "name": "Shadowserver",
                 "config": "''",
                 "params": {
                   "ip_address": ""
@@ -102,7 +102,7 @@
           "triggerLimit": null,
           "description": "Report back all the BGP peers for a specific CIDR.",
           "name": "Get Peer Query",
-          "tag": "#Shadow Server",
+          "tag": "#Shadowserver",
           "recordTags": [
             "Shadowserver",
             "shadowserver"
@@ -122,7 +122,7 @@
               "status": null,
               "arguments": {
                 "route": "29a5e91d-4eae-442d-abb9-2b367e617046",
-                "title": "Shadow Server: Get Peer Query",
+                "title": "Shadowserver: Get Peer Query",
                 "resources": [
                   "alerts"
                 ],
@@ -147,7 +147,7 @@
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Shadow Server",
+                "name": "Shadowserver",
                 "config": "''",
                 "params": {
                   "ip_address": ""
@@ -184,7 +184,7 @@
           "triggerLimit": null,
           "description": "Given an ASN report back all the routed CIDR's.",
           "name": "Get Prefix Query",
-          "tag": "#Shadow Server",
+          "tag": "#Shadowserver",
           "recordTags": [
             "Shadowserver",
             "shadowserver"
@@ -204,7 +204,7 @@
               "status": null,
               "arguments": {
                 "route": "6f5282e0-3674-42d0-b02a-829b7df54df9",
-                "title": "Shadow Server: Get Prefix Query",
+                "title": "Shadowserver: Get Prefix Query",
                 "resources": [
                   "alerts"
                 ],
@@ -229,7 +229,7 @@
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Shadow Server",
+                "name": "Shadowserver",
                 "config": "''",
                 "params": {
                   "query": ""
@@ -266,7 +266,7 @@
           "triggerLimit": null,
           "description": "Report back any information about the ASN.",
           "name": "Get ASN Query",
-          "tag": "#Shadow Server",
+          "tag": "#Shadowserver",
           "recordTags": [
             "Shadowserver",
             "shadowserver"
@@ -286,7 +286,7 @@
               "status": null,
               "arguments": {
                 "route": "2e817581-f6c9-408f-af01-6d1ce06cdd11",
-                "title": "Shadow Server: Get ASN Query",
+                "title": "Shadowserver: Get ASN Query",
                 "resources": [
                   "alerts"
                 ],
@@ -311,7 +311,7 @@
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Shadow Server",
+                "name": "Shadowserver",
                 "config": "''",
                 "params": {
                   "query": ""
@@ -348,7 +348,7 @@
           "triggerLimit": null,
           "description": "Returns a JSON response containing static details about the requested sample as well as antivirus vendor and signature details.",
           "name": "Get Malware Query",
-          "tag": "#Shadow Server",
+          "tag": "#Shadowserver",
           "recordTags": [
             "Shadowserver",
             "shadowserver"
@@ -368,7 +368,7 @@
               "status": null,
               "arguments": {
                 "route": "ef2c5f71-96a7-4def-b50a-70c871e3f9a6",
-                "title": "Shadow Server: Get Malware Query",
+                "title": "Shadowserver: Get Malware Query",
                 "resources": [
                   "alerts"
                 ],
@@ -393,7 +393,7 @@
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Shadow Server",
+                "name": "Shadowserver",
                 "config": "''",
                 "params": {
                   "md5": ""
@@ -430,7 +430,7 @@
           "triggerLimit": null,
           "description": "Returns a JSON response containing the details for the requested program. Replaces bin-test.shadowserver.org.",
           "name": "Get Programs Query",
-          "tag": "#Shadow Server",
+          "tag": "#Shadowserver",
           "recordTags": [
             "Shadowserver",
             "shadowserver"
@@ -450,7 +450,7 @@
               "status": null,
               "arguments": {
                 "route": "bdf7700f-aaa1-419f-8eff-639b99f777bc",
-                "title": "Shadow Server: Get Programs Query",
+                "title": "Shadowserver: Get Programs Query",
                 "resources": [
                   "alerts"
                 ],
@@ -475,7 +475,7 @@
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Shadow Server",
+                "name": "Shadowserver",
                 "config": "''",
                 "params": {
                   "query": ""

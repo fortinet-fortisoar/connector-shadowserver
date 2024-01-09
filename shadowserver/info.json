@@ -1,8 +1,8 @@
 {
   "name": "shadowserver",
   "version": "1.0.0",
-  "label": "Shadow Server",
-  "description": "Shadow server provides you with access to the most timely, critical Internet security like data collection,network reporting,investigation support ,reveal security vulnerabilities, expose malicious activity and help remediate victims.",
+  "label": "Shadowserver",
+  "description": "Shadowserver provides you with access to the most timely, critical Internet security like data collection,network reporting,investigation support ,reveal security vulnerabilities, expose malicious activity and help remediate victims.",
   "publisher": "spryIQ.co",
   "icon_small_name": "small.png",
   "icon_large_name": "large.png",
@@ -20,7 +20,7 @@
         "visible": true,
         "editable": true,
         "placeholder": "e.g: https://api.shadowserver.org or api.shadowserver.org",
-        "tooltip": "Specify the URL of the shadow-server server to connect and perform automated operations.",
+        "tooltip": "Specify the URL of the shadowserver server to connect and perform automated operations.",
         "value": "api.shadowserver.org"
       }
     ]

@@ -1,6 +1,6 @@
 ## About the connector
-Shadow server provides you with access to the most timely, critical Internet security like data collection,network reporting,investigation support ,reveal security vulnerabilities, expose malicious activity and help remediate victims.
-<p>This document provides information about the Shadow Server Connector, which facilitates automated interactions, with a Shadow Server server using FortiSOAR&trade; playbooks. Add the Shadow Server Connector as a step in FortiSOAR&trade; playbooks and perform automated operations with Shadow Server.</p>
+Shadowserver provides you with access to the most timely, critical Internet security like data collection,network reporting,investigation support ,reveal security vulnerabilities, expose malicious activity and help remediate victims.
+<p>This document provides information about the Shadowserver Connector, which facilitates automated interactions, with a Shadowserver server using FortiSOAR&trade; playbooks. Add the Shadowserver Connector as a step in FortiSOAR&trade; playbooks and perform automated operations with Shadowserver.</p>
 
 ### Version information
 
@@ -17,8 +17,8 @@ Certified: No
 `yum install cyops-connector-shadowserver`
 
 ## Prerequisites to configuring the connector
-- You must have the URL of Shadow Server server to which you will connect and perform automated operations and credentials to access that server.
-- The FortiSOAR&trade; server should have outbound connectivity to port 443 on the Shadow Server server.
+- You must have the URL of Shadowserver server to which you will connect and perform automated operations and credentials to access that server.
+- The FortiSOAR&trade; server should have outbound connectivity to port 443 on the Shadowserver server.
 
 ## Minimum Permissions Required
 - N/A
@@ -26,7 +26,7 @@ Certified: No
 ## Configuring the connector
 For the procedure to configure a connector, click [here](https://docs.fortinet.com/document/fortisoar/0.0.0/configuring-a-connector/1/configuring-a-connector)
 ### Configuration parameters
-<p>In FortiSOAR&trade;, on the Connectors page, click the <strong>Shadow Server</strong> connector row (if you are in the <strong>Grid</strong> view on the Connectors page) and in the <strong>Configurations&nbsp;</strong> tab enter the required configuration details:&nbsp;</p>
+<p>In FortiSOAR&trade;, on the Connectors page, click the <strong>Shadowserver</strong> connector row (if you are in the <strong>Grid</strong> view on the Connectors page) and in the <strong>Configurations&nbsp;</strong> tab enter the required configuration details:&nbsp;</p>
 <table border=1><thead><tr><th>Parameter<br></th><th>Description<br></th></tr></thead><tbody><tr><td>Server URL<br></td><td><br>
 </tbody></table>
 
@@ -197,7 +197,7 @@ The output contains the following populated JSON schema:
 </code><code><br>&nbsp;&nbsp;&nbsp;&nbsp;    "bit": ""
 </code><code><br>}</code>
 ## Included playbooks
-The `Sample - shadowserver - 1.0.0` playbook collection comes bundled with the Shadow Server connector. These playbooks contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > **Playbooks** section in FortiSOAR<sup>TM</sup> after importing the Shadow Server connector.
+The `Sample - shadowserver - 1.0.0` playbook collection comes bundled with the Shadowserver connector. These playbooks contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > **Playbooks** section in FortiSOAR<sup>TM</sup> after importing the Shadowserver connector.
 
 - Get Origin Query
 - Get Peer Query
